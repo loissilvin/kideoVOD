@@ -1,0 +1,138 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 123, 133, 0.76) url("img/funrotate.gif") center bottom ;
+    background-size: cover;
+    font-family: 'Kreon', serif;
+}
+
+
+header.headerMain
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+img
+{
+    width: 30%;
+}
+
+main.indexMain
+{
+    height: 63vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ main.indexMain h1
+{
+    font-family: granstander clean;
+    text-shadow: 2px 0 0 #EB5757, -2px 0 0 #EB5757, 0 2px 0 #EB5757, 0 -2px 0 #EB5757, 1px 1px #EB5757, -1px -1px 0 #EB5757, 1px -1px 0 #EB5757, -1px 1px 0 #EB5757;    
+    color: white;
+    font-size: 50px;
+    margin: 0;
+}
+
+main.indexMain h2
+{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin: 0;
+
+}
+
+#three
+{
+    background: white;
+    height: 12vh;
+    width: 20%;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Kreon', serif;
+    font-size: 25px;
+    color: #EB5757 ;
+    font-weight: bold;
+}
+#four { 
+    background: white;
+    height: 12vh;
+    width: 20%;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Kreon', serif;
+    font-size: 25px;
+    color: #EB5757 ;
+    font-weight: bold;
+    display: none;
+}
+
+#one
+{
+    background: white;
+    height: 8vh;
+    width: 15%;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Kreon', serif;
+    font-size: 25px;
+    color: #EB5757 ;
+    font-weight: bold;
+    
+}
+
+#two
+{
+    background: none;
+    height: 8vh;
+    width: 15%;
+    border-radius: 15px;
+    border: 3px solid white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Kreon', serif;
+    font-size: 25px;
+    color: white ;
+    font-weight: bold;
+}
+
+section.indexSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+}
+div.discover {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.discover a {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.discover p {
+    margin: 0 0;
+    color: white;
+}
+img#discover {
+    width: 100%;
+    margin: 30px 30px;
+}
+
+.responsive {
+    display: none;
+}
