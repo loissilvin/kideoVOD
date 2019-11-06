@@ -2,13 +2,13 @@ body
 {
     margin: 0;
     padding: 0;
-    background: rgba(255, 123, 133, 0.76) url("img/star.gif") center ;
+    background: rgba(255, 123, 133, 0.76) url("img/funrotate.gif") center bottom ;
     background-size: cover;
     font-family: 'Kreon', serif;
 }
 
 
-header
+header.headerMain
 {
     display: flex;
     justify-content: space-around;
@@ -21,16 +21,16 @@ img
     width: 30%;
 }
 
-main
+main.indexMain
 {
-    height: 65vh;
+    height: 63vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
- h1
+ main.indexMain h1
 {
     font-family: granstander clean;
     text-shadow: 2px 0 0 #EB5757, -2px 0 0 #EB5757, 0 2px 0 #EB5757, 0 -2px 0 #EB5757, 1px 1px #EB5757, -1px -1px 0 #EB5757, 1px -1px 0 #EB5757, -1px 1px 0 #EB5757;    
@@ -39,7 +39,7 @@ main
     margin: 0;
 }
 
-h2
+main.indexMain h2
 {
     text-align: center;
     color: white;
@@ -60,6 +60,19 @@ h2
     font-size: 25px;
     color: #EB5757 ;
     font-weight: bold;
+}
+#four { 
+    background: white;
+    height: 12vh;
+    width: 20%;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Kreon', serif;
+    font-size: 25px;
+    color: #EB5757 ;
+    font-weight: bold;
+    display: none;
 }
 
 #one
@@ -83,7 +96,7 @@ h2
     height: 8vh;
     width: 15%;
     border-radius: 15px;
-    border: 4px solid white;
+    border: 3px solid white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: 'Kreon', serif;
     font-size: 25px;
@@ -91,80 +104,35 @@ h2
     font-weight: bold;
 }
 
-/* h1
-{
+section.indexSection {
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    font-family: granstander clean;
-    text-shadow: 2px 0 0 #EB5757, -2px 0 0 #EB5757, 0 2px 0 #EB5757, 0 -2px 0 #EB5757, 1px 1px #EB5757, -1px -1px 0 #EB5757, 1px -1px 0 #EB5757, -1px 1px 0 #EB5757;    
-    color: white;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
 }
-
-h2
-{
+div.discover {
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-family: kreon;
-    font-weight: bold;
-    color: white;
-    font-size: 20px;
-    margin-top: 50px;
+    flex-direction: column;
 }
 
-button
-{
-    font-family: kreon;
-    border-radius: 10px;
-    font-weight: bold;
-
-}
-
-#one
-{
-    background: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0.25);
-    color: rgba(255, 123, 133, 0.76) ;
-    font-size: 20px;
-}
-
-#two
-{
-    border: 2px solid white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0.25);
-    background: none;
-    color: white;
-    font-size: 20px;
-}
-
-
-
-#three
-{
+div.discover a {
+    width: 80%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+div.discover p {
+    margin: 0 0;
+    color: white;
+}
+img#discover {
+    width: 100%;
+    margin: 30px 30px;
 }
 
-#three button
-{
-    background: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0.25);
-    border-radius: 20px;
-    color: rgba(255, 123, 133, 0.76) ;
-    width: 200px;
-    height: 70px;
+.responsive {
+    display: none;
 }
-
-section
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background: white;
-    margin-top: 50px;
-    padding: 5px;
-} */
-
