@@ -1,10 +1,14 @@
 body {
     margin: 0;
     padding: 0;
-    background: rgba(255, 123, 133, 0.76) url("img/funrotate.gif");
-    background-size: 50%;
+    background: rgba(255, 123, 133, 0.76) url("img/funrotate.gif") center bottom;
+    background-size: cover;
     font-family: 'Kreon', serif;
+    color: white;
 }
+
+
+/* HEADER */
 
 header.headerMain {
     display: flex;
@@ -13,9 +17,15 @@ header.headerMain {
     margin-top: 20px;
 }
 
+
+/* LOGO  */
+
 img {
-    width: 30%;
+    width: 28%;
 }
+
+
+/* SECTION PRINCIPALES AVEC OFFRES */
 
 main.indexMain {
     height: 63vh;
@@ -26,11 +36,12 @@ main.indexMain {
 }
 
 main.indexMain h1 {
-    font-family: "granstander clean";
+    font-family: granstander clean;
     text-shadow: 2px 0 0 #EB5757, -2px 0 0 #EB5757, 0 2px 0 #EB5757, 0 -2px 0 #EB5757, 1px 1px #EB5757, -1px -1px 0 #EB5757, 1px -1px 0 #EB5757, -1px 1px 0 #EB5757;
     color: white;
-    font-size: 3.8em;
+    font-size: 50px;
     margin: 0;
+    text-align: center;
 }
 
 main.indexMain h2 {
@@ -40,55 +51,20 @@ main.indexMain h2 {
     margin: 0;
 }
 
-#three {
-    background: white;
-    height: 12vh;
-    width: 20%;
-    border-radius: 20px;
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'Kreon', serif;
-    font-size: 1.7em;
-    color: #EB5757;
-    font-weight: bold;
-}
 
-#four {
-    background: white;
-    height: 12vh;
-    width: 20%;
-    border-radius: 20px;
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'Kreon', serif;
-    font-size: 25px;
-    color: #EB5757;
-    font-weight: bold;
-    display: none;
-}
+/* LES BOUTONS */
 
-#four {
-    background: white;
-    height: 12vh;
-    width: 20%;
-    border-radius: 20px;
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+button {
     font-family: 'Kreon', serif;
-    font-size: 25px;
-    color: #EB5757;
-    font-weight: bold;
-    display: none;
 }
 
 #one {
     background: white;
-    height: 8vh;
-    width: 15%;
+    height: 50px;
+    width: 200px;
     border-radius: 15px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'Kreon', serif;
     font-size: 25px;
     color: #EB5757;
     font-weight: bold;
@@ -96,16 +72,43 @@ main.indexMain h2 {
 
 #two {
     background: none;
-    height: 8vh;
-    width: 15%;
+    height: 50px;
+    width: 200px;
     border-radius: 15px;
     border: 3px solid white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'Kreon', serif;
     font-size: 25px;
     color: white;
     font-weight: bold;
 }
+
+#three {
+    background: white;
+    height: 55px;
+    width: 225px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 25px;
+    color: #EB5757;
+    font-weight: bold;
+}
+
+#four {
+    background: none;
+    height: 55px;
+    width: 225px;
+    border-radius: 15px;
+    border: 3px solid white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    display: none;
+}
+
+
+/* SECTION DECOUVRIR */
 
 section.indexSection {
     display: flex;
@@ -135,15 +138,167 @@ div.discover p {
 
 img#discover {
     width: 100%;
-    margin: 30px 70px;
+    margin: 30px 30px;
 }
+
+
+/* Image à faire apparaitre en responsive  */
 
 .responsive {
     display: none;
 }
 
 
-/* formulaire */
+/* FOOTER  */
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.87);
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .cols1 {
+    height: 30vh;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+footer .cols1 ul.footerList li {
+    display: inline-block;
+}
+
+footer .cols1 ul.footerList {
+    padding: 0;
+}
+
+footer .cols1 ul.footerList li a {
+    color: white;
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+}
+
+footer .cols1 ul#socialMedia li:nth-child(1) a:hover {
+    background-color: #3a5a95;
+}
+
+footer .cols1 ul#socialMedia li:nth-child(2) a:hover {
+    background-color: #57aced;
+}
+
+footer .cols1 ul#socialMedia li:nth-child(3) a:hover {
+    background-color: #dd4f43;
+}
+
+footer .cols1 ul#socialMedia li:nth-child(4) a:hover {
+    background-color: #6b27b2;
+}
+
+footer .cols1 ul#payment li a:hover {
+    background-color: rgb(253, 98, 111);
+}
+
+footer #logoKideo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer #logoKideo p {
+    margin: 0;
+}
+
+footer #logoKideo img {
+    margin: 20px;
+    width: 50%;
+}
+
+footer #newsletterKideo .input-group input {
+    border-radius: 5px;
+    border: 1px solid rgba(199, 199, 199, 0.801);
+    height: 4vh;
+}
+
+footer #newsletterKideo .input-group input:focus::placeholder {
+    opacity: 0;
+}
+
+footer #newsletterKideo .input-group input:focus {
+    outline: none;
+    border: 1px solid rgb(253, 98, 111);
+}
+
+footer #newsletterKideo button.submitNewsletter {
+    border-radius: 5px;
+    border: none;
+    height: 4.6vh;
+    background-color: #00FFE9;
+    color: white;
+}
+
+footer #newsletterKideo .input-group {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* RESPONSIVE  */
+
+
+/* Première étape entre ipad et iphone */
+
+@media screen and (max-width: 661px) {
+    #one {
+        display: none;
+    }
+    #two {
+        display: none;
+    }
+    #four {
+        display: initial;
+    }
+    main.indexMain h1 {
+        font-size: 30px;
+    }
+}
+
+
+/* ETAPE Iphone 7/8Plus */
+
+@media screen and (max-width: 414px) {
+    main.indexMain h1 {
+        font-size: 25px;
+    }
+    .responsive {
+        display: initial;
+    }
+    .noresponsive {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    main.indexMain h1 {
+        font-size: 20px;
+    }
+    main.indexMain h2 {
+        font-size: 20px;
+    }
+}
+
+
+/* REGISTER.HTML */
+
+
+/* début formulaire */
 
 input {
     border-radius: 5px;
@@ -312,31 +467,4 @@ img.screen {
 }
 
 
-/* @media screen and (max-width: 310px) {
-    #forms {
-        flex-direction: column;
-        width: 90%;
-        height: auto;
-    }
-    input {
-        width: 140%;
-        height: 5vh;
-        margin: 0;
-    }
-    .buttonRegister button {
-        box-shadow: 0px 5px 0px #EB5757, 0px 5px 5px yellow;
-        width: 70%;
-    }
-    .buttonRegister p {
-        font-size: 0.60rem;
-    }
-    .register h1 {
-        font-size: 2rem;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-    .offre {
-        width: auto;
-        height: auto;
-    }
-} */
+/* fin formulaire */
