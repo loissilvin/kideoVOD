@@ -1,0 +1,342 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 123, 133, 0.76) url("img/funrotate.gif");
+    background-size: 50%;
+    font-family: 'Kreon', serif;
+}
+
+header.headerMain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+img {
+    width: 30%;
+}
+
+main.indexMain {
+    height: 63vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main.indexMain h1 {
+    font-family: "granstander clean";
+    text-shadow: 2px 0 0 #EB5757, -2px 0 0 #EB5757, 0 2px 0 #EB5757, 0 -2px 0 #EB5757, 1px 1px #EB5757, -1px -1px 0 #EB5757, 1px -1px 0 #EB5757, -1px 1px 0 #EB5757;
+    color: white;
+    font-size: 3.8em;
+    margin: 0;
+}
+
+main.indexMain h2 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin: 0;
+}
+
+#three {
+    background: white;
+    height: 12vh;
+    width: 20%;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Kreon', serif;
+    font-size: 1.7em;
+    color: #EB5757;
+    font-weight: bold;
+}
+
+#four {
+    background: white;
+    height: 12vh;
+    width: 20%;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Kreon', serif;
+    font-size: 25px;
+    color: #EB5757;
+    font-weight: bold;
+    display: none;
+}
+
+#four {
+    background: white;
+    height: 12vh;
+    width: 20%;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Kreon', serif;
+    font-size: 25px;
+    color: #EB5757;
+    font-weight: bold;
+    display: none;
+}
+
+#one {
+    background: white;
+    height: 8vh;
+    width: 15%;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Kreon', serif;
+    font-size: 25px;
+    color: #EB5757;
+    font-weight: bold;
+}
+
+#two {
+    background: none;
+    height: 8vh;
+    width: 15%;
+    border-radius: 15px;
+    border: 3px solid white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Kreon', serif;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+section.indexSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.discover {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.discover a {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.discover p {
+    margin: 0 0;
+    color: white;
+}
+
+img#discover {
+    width: 100%;
+    margin: 30px 70px;
+}
+
+.responsive {
+    display: none;
+}
+
+
+/* formulaire */
+
+input {
+    border-radius: 5px;
+    width: 70%;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: lightgrey;
+}
+
+input:focus::placeholder {
+    color: rgba(255, 123, 133, 0.76)
+}
+
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register h1 {
+    font-size: 1.3rem;
+    color: #EB5757;
+    display: flex;
+}
+
+.buttonRegister {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonRegister button {
+    color: #EB5757;
+    background: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-color: #EB5757;
+    border-radius: 40px 100px 100px 100px;
+    width: 50%;
+    outline: none;
+}
+
+.offre {
+    border: 3px solid #EB5757;
+    width: 45%;
+    border-radius: 5px 80px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    margin-right: 20px;
+}
+
+.offre p {
+    font-size: 1.5rem;
+}
+
+.offre .unique {
+    font-size: 1.7rem;
+    font-family: "granstander clean";
+    color: #EB5757;
+}
+
+.heros p {
+    font-family: "granstander clean";
+    text-shadow: 2px 0 0 #EB5757, -2px 0 0 #EB5757, 0 2px 0 #EB5757, 0 -2px 0 #EB5757, 1px 1px #EB5757, -1px -1px 0 #EB5757, 1px -1px 0 #EB5757, -1px 1px 0 #EB5757;
+    color: white;
+    font-size: 3em;
+    margin: 0;
+    display: flex;
+    text-align: center;
+}
+
+.heros {
+    border: 3px solid #EB5757;
+    width: 45%;
+    border-radius: 5px 80px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    margin-right: 20px;
+    background: rgba(255, 123, 134, 0.541);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header img.kideoForm {
+    width: 20%;
+}
+
+.buttonRegister p {
+    font-size: 0.75rem;
+    margin-top: 15px;
+    color: #EB5757;
+}
+
+img.screen {
+    width: 50%;
+}
+
+#forms {
+    box-shadow: 0 2px 4px white;
+    transform: scale(0.9);
+    background: white;
+    transition: 1s;
+    background-size: 600% 600%;
+    animation: beforeLineAnim 5s ease-in-out infinite;
+    display: flex;
+    margin: auto;
+    width: 60%;
+    height: 75vh;
+    justify-content: space-around;
+    border-radius: 10px 100px 100px 100px;
+    margin-top: 20pX;
+    align-items: center;
+}
+
+#conect {
+    box-shadow: 0 2px 4px white;
+    transform: scale(0.9);
+    background: white;
+    transition: 1s;
+    background-size: 600% 600%;
+    animation: beforeLineAnim 5s ease-in-out infinite;
+    display: flex;
+    margin: auto;
+    width: 60%;
+    height: 75vh;
+    justify-content: space-around;
+    border-radius: 10px 100px 100px 100px;
+    margin-top: 20pX;
+    align-items: center;
+}
+
+#forms:hover {
+    transform: scale(1);
+}
+
+#conect:hover {
+    transform: scale(1);
+}
+
+@keyframes beforeLineAnim {
+    to {
+        background-position: 30% 30%;
+    }
+}
+
+
+/* @media screen and (max-width: 310px) {
+    #forms {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+    input {
+        width: 140%;
+        height: 5vh;
+        margin: 0;
+    }
+    .buttonRegister button {
+        box-shadow: 0px 5px 0px #EB5757, 0px 5px 5px yellow;
+        width: 70%;
+    }
+    .buttonRegister p {
+        font-size: 0.60rem;
+    }
+    .register h1 {
+        font-size: 2rem;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .offre {
+        width: auto;
+        height: auto;
+    }
+} */
