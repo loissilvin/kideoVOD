@@ -1,10 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    background: rgba(255, 123, 133, 0.76) url("img/funrotate.gif") center bottom;
-    background-size: cover;
+    background: rgba(255, 123, 133, 0.76) url("img/funrotate.gif");
+    background-size: 50%;
     font-family: 'Kreon', serif;
-    color: white;
 }
 
 
@@ -297,126 +296,18 @@ footer #newsletterKideo .input-group {
 
 /* REGISTER.HTML */
 
-
-/* début formulaire */
-
-input {
-    border-radius: 5px;
-    width: 70%;
-}
-
-input:focus {
-    outline: none;
-}
-
-input::placeholder {
-    color: lightgrey;
-}
-
-input:focus::placeholder {
-    color: rgba(255, 123, 133, 0.76)
-}
-
-.registerForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-}
-
-.register {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.register h1 {
-    font-size: 1.3rem;
-    color: #EB5757;
-    display: flex;
-}
-
-.buttonRegister {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.buttonRegister button {
-    color: #EB5757;
-    background: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-color: #EB5757;
-    border-radius: 40px 100px 100px 100px;
-    width: 50%;
-    outline: none;
-}
-
-.offre {
-    border: 3px solid #EB5757;
-    width: 45%;
-    border-radius: 5px 80px 80px 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
-    margin-right: 20px;
-}
-
-.offre p {
-    font-size: 1.5rem;
-}
-
-.offre .unique {
-    font-size: 1.7rem;
-    font-family: "granstander clean";
-    color: #EB5757;
-}
-
-.heros p {
-    font-family: "granstander clean";
-    text-shadow: 2px 0 0 #EB5757, -2px 0 0 #EB5757, 0 2px 0 #EB5757, 0 -2px 0 #EB5757, 1px 1px #EB5757, -1px -1px 0 #EB5757, 1px -1px 0 #EB5757, -1px 1px 0 #EB5757;
-    color: white;
-    font-size: 3em;
-    margin: 0;
-    display: flex;
-    text-align: center;
-}
-
-.heros {
-    border: 3px solid #EB5757;
-    width: 45%;
-    border-radius: 5px 80px 80px 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-    margin-right: 20px;
-    background: rgba(255, 123, 134, 0.541);
-}
-
-header {
+#registerHeader {
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
 
-header img.kideoForm {
+#registerHeader img.kideoForm {
     width: 20%;
 }
 
-.buttonRegister p {
-    font-size: 0.75rem;
-    margin-top: 15px;
-    color: #EB5757;
-}
 
-img.screen {
-    width: 50%;
-}
+/* grande section du REGISTER FORM */
 
 #forms {
     box-shadow: 0 2px 4px white;
@@ -435,6 +326,132 @@ img.screen {
     align-items: center;
 }
 
+
+/* la div du REGISTER + boutton */
+
+#forms .registerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45%;
+    height: 70vh;
+}
+
+
+/* la div REGISTER */
+
+#forms .registerForm .register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 40vh; */
+}
+
+#forms .registerForm .register h1 {
+    font-size: 1.3rem;
+    color: #EB5757;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+#forms .registerForm .register input {
+    border-radius: 5px;
+    width: 70%;
+    margin: 8px;
+    height: 5vh;
+}
+
+#forms .registerForm .register input:focus {
+    outline: none;
+}
+
+#forms .registerForm .register input::placeholder {
+    color: lightgrey;
+    margin-left: 10px;
+}
+
+#forms .registerForm .register input:focus::placeholder {
+    color: rgba(255, 123, 133, 0.76);
+    font-weight: bold;
+}
+
+
+/* la div du boutton */
+
+#forms .registerForm .buttonRegister {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#forms .registerForm .buttonRegister button {
+    color: #EB5757;
+    background: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 40px 100px 100px 100px;
+    border-color: #EB5757;
+    border-width: 4px;
+    width: 50%;
+    outline: none;
+}
+
+#forms .registerForm .buttonRegister p {
+    font-size: 0.75rem;
+    margin-top: 15px;
+    color: #EB5757;
+}
+
+
+/* la div de l'offre */
+
+#forms .offre {
+    border: 2px solid #EB5757;
+    width: 45%;
+    border-radius: 5px 80px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+}
+
+#forms .offre .unique {
+    font-size: 1.7rem;
+    font-family: "granstander clean";
+    color: #EB5757;
+    margin-top: 10px;
+}
+
+#forms .offre p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#forms .offre img.prix {
+    width: 40%;
+    height: 22vh;
+}
+
+#forms .offre ul {
+    margin: 0;
+}
+
+#forms .offre img.screen {
+    width: 40%;
+    height: 13vh;
+}
+
+
+/* FIN DU REGISTER */
+
+
+/* DEBUT DU CONNEXION FORM */
+
+
+/* la grande section du CONNEXION FORM */
+
 #conect {
     box-shadow: 0 2px 4px white;
     transform: scale(0.9);
@@ -452,6 +469,112 @@ img.screen {
     align-items: center;
 }
 
+
+/* la div du CONNEXION FORM + le boutton */
+
+#conect .connexionForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45%;
+    height: 70vh;
+}
+
+
+/* la div du CONNEXION FORM */
+
+#conect .connexionForm .connexion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 40vh; */
+}
+
+#conect .connexionForm .connexion h1 {
+    font-size: 1.3rem;
+    color: #EB5757;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+#conect .connexionForm .connexion input {
+    border-radius: 5px;
+    width: 70%;
+    margin: 8px;
+    height: 7vh;
+}
+
+#conect .connexionForm .connexion input:focus {
+    outline: none;
+}
+
+#conect .connexionForm .connexion input::placeholder {
+    color: lightgrey;
+    margin-left: 10px;
+}
+
+#conect .connexionForm .connexion input:focus::placeholder {
+    color: rgba(255, 123, 133, 0.76);
+    font-weight: bold;
+}
+
+
+/* la div du BOUTTON */
+
+#conect .connexionForm .buttonConnexion {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#conect .connexionForm .buttonConnexion button {
+    color: #EB5757;
+    background: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 40px 100px 100px 100px;
+    border-color: #EB5757;
+    border-width: 4px;
+    width: 50%;
+    outline: none;
+}
+
+#conect .connexionForm .buttonConnexion p {
+    font-size: 0.75rem;
+    margin-top: 15px;
+    color: #EB5757;
+}
+
+
+/* la div deco des heros */
+
+#conect .heros {
+    border: 3px solid #EB5757;
+    width: 45%;
+    border-radius: 5px 80px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    margin-right: 20px;
+    background: rgba(255, 123, 134, 0.541);
+}
+
+#conect .heros p.slogan {
+    font-family: "granstander clean";
+    text-shadow: 2px 0 0 #EB5757, -2px 0 0 #EB5757, 0 2px 0 #EB5757, 0 -2px 0 #EB5757, 1px 1px #EB5757, -1px -1px 0 #EB5757, 1px -1px 0 #EB5757, -1px 1px 0 #EB5757;
+    color: white;
+    font-size: 3em;
+    display: flex;
+    text-align: center;
+    line-height: 15vh;
+}
+
+
+/* animation hover */
+
 #forms:hover {
     transform: scale(1);
 }
@@ -465,6 +588,3 @@ img.screen {
         background-position: 30% 30%;
     }
 }
-
-
-/* fin formulaire */

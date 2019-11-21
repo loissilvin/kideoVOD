@@ -1,21 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Connexion</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="Public/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kreon:300,400,500,600,700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
 
-    <header>
-            <img src="img/Kideo.png" alt="Titre 'Kideo'">
+    <header id="registerHeader">
+        <img class="kideoForm" src="Public/img/Kideo.png" alt="Titre 'Kideo'">
     </header>
 
-    <main>
-        
-    </main>
-    
+    <section id="forms">
+        <div class="registerForm">
+
+            <div class="register">
+                <h1>S'inscrire</h1>
+                <input type="username" required placeholder=" Pseudo">
+                <input type="email" required placeholder=" E-mail">
+                <input type="password" required placeholder=" Mot de passe">
+                <input type="confirm-password" required placeholder=" Confirmez mot de passe">
+            </div>
+
+            <div class="buttonRegister">
+                <button type="submit">Envoyer</button>
+                <p>Déjà un compte ? <a href="#">Connectez-vous</a></p>
+            </div>
+        </div>
+
+        <div class="offre">
+            <p class="unique">OFFRE UNIQUE</p>
+            <p>Un mois d'essai offert puis</p>
+            <img class="prix" src="Public/img/Group1new.png">
+            <ul>
+                <li>Sans engagement</li>
+                <li>HD</li>
+                <li>Accès illimité</li>
+                <li>3 écrans en simultanés</li>
+            </ul>
+            <img class="screen" src="Public/img/screen.png">
+        </div>
+
+        </div>
+    </section>
+
+    <section id="conect">
+        <div class="connexionForm">
+
+            <div class="connexion">
+                <h1>Se connecter</h1>
+                <input type="email" required placeholder=" E-mail">
+                <input type="password" required placeholder=" Mot de passe">
+            </div>
+
+            <div class="buttonConnexion">
+                <button type="submit">Envoyer</button>
+                <p>Pas encore de compte ? <a href="#">Inscrivez-vous</a></p>
+            </div>
+        </div>
+
+        <div class="heros">
+            <p class="slogan">Au </br>plus proche</br> des héros</p>
+        </div>
+
+        </div>
+    </section>
+
+
+
 </body>
+
 </html>
