@@ -4,6 +4,7 @@ body {
     background: rgba(255, 123, 133, 0.76) url("img/funrotate.gif");
     background-size: 50%;
     font-family: 'Kreon', serif;
+    color: white;
 }
 
 
@@ -149,7 +150,6 @@ img#discover {
 
 
 /* FOOTER  */
-
 footer {
     border-top: 1px solid rgba(255, 255, 255, 0.87);
     height: 30vh;
@@ -157,7 +157,6 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
-
 footer .cols1 {
     height: 30vh;
     width: 23%;
@@ -165,16 +164,14 @@ footer .cols1 {
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
-}
 
+}
 footer .cols1 ul.footerList li {
     display: inline-block;
 }
-
 footer .cols1 ul.footerList {
     padding: 0;
 }
-
 footer .cols1 ul.footerList li a {
     color: white;
     display: block;
@@ -184,19 +181,15 @@ footer .cols1 ul.footerList li a {
     line-height: 30px;
     text-align: center;
 }
-
 footer .cols1 ul#socialMedia li:nth-child(1) a:hover {
     background-color: #3a5a95;
 }
-
 footer .cols1 ul#socialMedia li:nth-child(2) a:hover {
     background-color: #57aced;
 }
-
 footer .cols1 ul#socialMedia li:nth-child(3) a:hover {
     background-color: #dd4f43;
 }
-
 footer .cols1 ul#socialMedia li:nth-child(4) a:hover {
     background-color: #6b27b2;
 }
@@ -204,52 +197,44 @@ footer .cols1 ul#socialMedia li:nth-child(4) a:hover {
 footer .cols1 ul#payment li a:hover {
     background-color: rgb(253, 98, 111);
 }
-
 footer #logoKideo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
 footer #logoKideo p {
     margin: 0;
 }
-
 footer #logoKideo img {
     margin: 20px;
     width: 50%;
 }
-
 footer #newsletterKideo .input-group input {
     border-radius: 5px;
     border: 1px solid rgba(199, 199, 199, 0.801);
     height: 4vh;
 }
-
 footer #newsletterKideo .input-group input:focus::placeholder {
     opacity: 0;
+    
 }
-
 footer #newsletterKideo .input-group input:focus {
     outline: none;
     border: 1px solid rgb(253, 98, 111);
 }
-
 footer #newsletterKideo button.submitNewsletter {
     border-radius: 5px;
     border: none;
-    height: 4.6vh;
+    height: 5vh;
     background-color: #00FFE9;
     color: white;
 }
-
 footer #newsletterKideo .input-group {
-    display: flex;
-    justify-content: center;
+    width: 97%;
 }
 
 
-/* RESPONSIVE  */
+/* RESPONSIVE INDEX */
 
 
 /* Première étape entre ipad et iphone */
@@ -424,9 +409,10 @@ footer #newsletterKideo .input-group {
     margin-top: 10px;
 }
 
-#forms .offre p {
+#forms .offre p.pOffre {
     font-size: 1.5rem;
     margin: 0;
+    color: black;
 }
 
 #forms .offre img.prix {
@@ -434,8 +420,9 @@ footer #newsletterKideo .input-group {
     height: 22vh;
 }
 
-#forms .offre ul {
+#forms .offre ul.avantages {
     margin: 0;
+    color: black;
 }
 
 #forms .offre img.screen {
