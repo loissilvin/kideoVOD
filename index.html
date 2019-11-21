@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="Public/style.css">
     <link href="https://fonts.googleapis.com/css?family=Kreon:300,400,500,600,700&display=swap" rel="stylesheet">
+
     <title>VOD KIDEO</title>
 </head>
 
 <body>
-    <!-- HEADER  -->
     <header class="headerMain">
 
         <button id="one">1 MOIS OFFERT</button>
@@ -21,7 +22,7 @@
         <button id="two">Se connecter</button>
 
     </header>
-    <!-- MAIN OFFRES -->
+
     <main class="indexMain">
         <h1>Au plus proche des héros</h1>
 
@@ -33,46 +34,72 @@
         <button id="four">Se connecter</button>
 
     </main>
-<!-- Section 'découvrir films/séries' inclu bouton et images -->
     <section class="indexSection">
         <div class="discover">
             <p>Découvrir</p>
             <a href="#discover"><img src="Public/img/downarrow.png" alt="Boutton flèche vers le bas"></a>
         </div>
-        <img id="discover" class='noresponsive' src="Public/img/galleriefilm.png" alt="Présentation des films et dessins animés présents sur la plateforme">
+        <img id="discover" src="Public/img/galleriefilm.png" alt="Présentation des films et dessins animés présents sur la plateforme">
         <img id="discover" class="responsive" src="Public/img/gallerieresponsive.png" alt="Présentation des films et dessins animés présents sur la">
     </section>
-    <!-- FOOTER  -->
-    <footer>
-        <div class="cols1" id="logoKideo">
-            <img src="Public/img/Kideo.png" alt="Titre 'Kideo'">
-            <p> © 2019. Made by Lois & Sarah</p>
-        </div>
-        <div class="cols1" id="reseaux">
-            <h4 class="title">Suivez-nous</h4>
-                <ul class="footerList" id="socialMedia">
-                    <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
-                    <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-        </div>
-        <div class="cols1" id="paiments">
-            <h4 class="title">Méthodes de paiement</h4>
-                <ul class="footerList" id="payment">
-                    <li><a href="#"><i class="fa fa-cc-amex" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
-                </ul>
-        </div>
-        <div class="cols1" id="newsletterKideo">
-            <h4 class="title">Newsletter</h4>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="addresse@email.fr">
-                    <button type="button" class="submitNewsletter">Envoyer</button>
+
+
+    <!--   FOOTER START================== -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+
+                    <img src="../kideoVOD/Public/img/Kideo.png" alt="Titre 'Kideo'">
+
                 </div>
-        </div>
+                <div class="col-sm-3">
+                    <h4 class="title">Follow us</h4>
+                    <ul class="social-pet mt-4">
+                        <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-3">
+                    <h4 class="title">Payment Methods</h4>
+
+                    <ul class="payment">
+                        <li><a href="#"><i class="fa fa-cc-amex" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-3">
+                    <h4 class="title">Newsletter</h4>
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Your Email Address">
+                        <button type="button" class="btn btn-outline-info btn-rounded waves-effect">Submit</button>
+                    </div>
+
+                </div>
+
+
+
+                <div class="row text-center"> © 2019. Made by Lois & Sarah</div>
+            </div>
+
+
+
     </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
