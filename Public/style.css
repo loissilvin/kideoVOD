@@ -397,6 +397,10 @@ footer #newsletterKideo .input-group {
     outline: none;
 }
 
+#forms .registerForm .buttonRegister button:hover {
+    cursor: pointer;
+}
+
 #forms .registerForm .buttonRegister p {
     font-size: 0.75rem;
     margin-top: 15px;
@@ -443,6 +447,7 @@ footer #newsletterKideo .input-group {
 #forms .offre img.screen {
     width: 40%;
     height: 13vh;
+    margin-bottom: 15px;
 }
 
 
@@ -542,6 +547,10 @@ footer #newsletterKideo .input-group {
     outline: none;
 }
 
+#conect .connexionForm .buttonConnexion button {
+    cursor: pointer;
+}
+
 #conect .connexionForm .buttonConnexion p {
     font-size: 0.75rem;
     margin-top: 15px;
@@ -574,6 +583,10 @@ footer #newsletterKideo .input-group {
     line-height: 15vh;
 }
 
+#conect {
+    display: none;
+}
+
 
 /* animation hover */
 
@@ -588,5 +601,175 @@ footer #newsletterKideo .input-group {
 @keyframes beforeLineAnim {
     to {
         background-position: 30% 30%;
+    }
+}
+
+
+/* CSS PAGE DE PRESENTATION */
+
+#presentationHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 60%;
+    height: 20vh;
+}
+
+#presentationHeader img.kideoForm {
+    width: 35%;
+}
+
+#presentationHeader button.retour {
+    width: 10%;
+    background: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+}
+
+#presentationHeader button.retour:hover {
+    cursor: pointer;
+}
+
+#presentationHeader button.retour img {
+    width: 100%;
+}
+
+#presentationHeader button.retour p {
+    color: white;
+    margin: 0;
+}
+
+
+/* image de la video */
+
+#pagePresentation {
+    background: rgba(0, 0, 0, 0.78);
+    display: flex;
+    margin: auto;
+    width: 60%;
+    height: 75vh;
+    justify-content: space-around;
+    border-radius: 10px 80px 80px 80px;
+    margin-top: 20pX;
+    align-items: center;
+}
+
+#pagePresentation .containerImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 70vh;
+}
+
+#pagePresentation .containerImg img.imgVideo {
+    width: 80%;
+    height: 63vh;
+    border-radius: 0px 0px 0px 20px;
+}
+
+
+/* div de la presentation du film */
+
+#pagePresentation .synopsis {
+    border: 2px solid #EB5757;
+    width: 45%;
+    height: 70vh;
+    border-radius: 5px 80px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#pagePresentation .synopsis p.resume {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#pagePresentation .synopsis div.liens {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+    color: #EB5757;
+}
+
+#pagePresentation .synopsis div.liens a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+
+/* bouton play */
+
+.play-btn {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#EB5757 63%, rgba(255, 255, 255, 1) 65%);
+    border-radius: 60%;
+    position: absolute;
+    display: block;
+    box-shadow: 0px 0px 25px 3px #EB5757;
+}
+
+
+/* triangle */
+
+.play-btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-40%) translateY(-50%);
+    transform-origin: center center;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 25px solid #fff;
+    z-index: 100;
+    transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+
+/* pulse wave */
+
+.play-btn:before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    animation-delay: 0s;
+    animation: pulsate1 2s;
+    animation-direction: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps;
+    opacity: 1;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, .75);
+    top: -30%;
+    left: -30%;
+    background: rgba(198, 16, 0, 0);
+}
+
+@keyframes pulsate1 {
+    0% {
+        transform: scale(0.6);
+        opacity: 1;
+        box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+        box-shadow: none;
     }
 }

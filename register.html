@@ -9,7 +9,7 @@
     <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
     <link rel="stylesheet" href="Public/style.css">
     <link href="https://fonts.googleapis.com/css?family=Kreon:300,400,500,600,700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 </head>
 
@@ -24,15 +24,15 @@
 
             <div class="register">
                 <h1>S'inscrire</h1>
-                <input type="username" required placeholder=" Pseudo">
-                <input type="email" required placeholder=" E-mail">
-                <input type="password" required placeholder=" Mot de passe">
-                <input type="confirm-password" required placeholder=" Confirmez mot de passe">
+                <input id="usernameInput" type="username" required placeholder=" Pseudo">
+                <input id="emailInput" type="email" required placeholder=" E-mail">
+                <input id="passwordInput" type="password" required placeholder=" Mot de passe">
+                <input id="passwordInput" type="password" required placeholder=" Confirmez mot de passe">
             </div>
 
             <div class="buttonRegister">
-                <button type="submit">Envoyer</button>
-                <p>Déjà un compte ? <a href="#">Connectez-vous</a></p>
+                <button id="submitButton" type="submit">Envoyer</button>
+                <p>Déjà un compte ? <a href="#" data-form="0" class="change">Connectez-vous</a></p>
             </div>
         </div>
 
@@ -62,8 +62,8 @@
             </div>
 
             <div class="buttonConnexion">
-                <button type="submit">Envoyer</button>
-                <p>Pas encore de compte ? <a href="#">Inscrivez-vous</a></p>
+                <button id="submitButton" type="submit">Envoyer</button>
+                <p>Pas encore de compte ? <a href="#" data-form="1" class="change">Inscrivez-vous</a></p>
             </div>
         </div>
 
@@ -110,5 +110,49 @@
 
 
 </body>
+<script type="text/javascript">
+    const buttons = document.getElementsByClassName("change");
+    const registerForm = document.getElementById("forms");
+    const connectionForm = document.getElementById("conect");
+
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function(e) {
+            if (e.target.getAttribute("data-form") == 0) {
+                registerForm.style.display = "none";
+                connectionForm.style.display = "flex";
+            } else {
+                connectionForm.style.display = "none";
+                registerForm.style.display = "flex";
+            }
+
+        })
+    };
+
+    $(document).ready(function(event) {
+        $('#submitButton').click(function(e) {
+            let username = $("#usernameInput").val();
+            let email = $("#emailInput").val();
+            let password = $("#passwordInput").val();
+
+            console.log(username, email, password);
+
+
+
+            $.post("https://brianboudrioux.fr/simplon/api/users", {
+                username: username,
+                email: email,
+                password: password
+            }, function(data, status) {
+                console.log(status);
+                if (typeof data.errors == "undefined")
+                    window.location.href = "index.html"
+                else
+                    console.log(data.errors)
+
+            });
+        })
+    });
+</script>
 
 </html>

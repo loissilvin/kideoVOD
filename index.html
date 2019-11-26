@@ -44,37 +44,43 @@
 
 
     <!--   FOOTER START================== -->
-   <footer>
+    <footer>
         <div class="cols1" id="logoKideo">
             <img src="Public/img/Kideo.png" alt="Titre 'Kideo'">
             <p> © 2019. Made by Lois & Sarah</p>
         </div>
         <div class="cols1" id="reseaux">
             <h4 class="title">Suivez-nous</h4>
-                <ul class="footerList" id="socialMedia">
-                    <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
-                    <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
-                </ul>
+            <ul class="footerList" id="socialMedia">
+                <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+            </ul>
         </div>
         <div class="cols1" id="paiments">
             <h4 class="title">Méthodes de paiement</h4>
-                <ul class="footerList" id="payment">
-                    <li><a href="#"><i class="fa fa-cc-amex" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
-                </ul>
+            <ul class="footerList" id="payment">
+                <li><a href="#"><i class="fa fa-cc-amex" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+            </ul>
         </div>
         <div class="cols1" id="newsletterKideo">
             <h4 class="title">Newsletter</h4>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="addresse@email.fr">
-                    <button type="button" class="submitNewsletter">Envoyer</button>
-                </div>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="addresse@email.fr">
+                <button type="button" class="submitNewsletter">Envoyer</button>
+            </div>
         </div>
     </footer>
 </body>
+<script type="text/javascript">
+    let goRegister = document.getElementById("one");
+    goRegister.addEventListener("click", function() {
+        window.location.href = "register.html?id=forms"
+    })
+</script>
 
 </html>
