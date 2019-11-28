@@ -8,7 +8,7 @@ body {
 }
 
 
-/* HEADER */
+/* HEADER ===========================================*/
 
 header.headerMain {
     display: flex;
@@ -18,14 +18,14 @@ header.headerMain {
 }
 
 
-/* LOGO  */
+/* LOGO  =============================================*/
 
 img {
     width: 28%;
 }
 
 
-/* SECTION PRINCIPALES AVEC OFFRES */
+/* SECTION PRINCIPALES AVEC OFFRES======================== */
 
 main.indexMain {
     height: 63vh;
@@ -52,7 +52,7 @@ main.indexMain h2 {
 }
 
 
-/* LES BOUTONS */
+/* LES BOUTONS =============================================*/
 
 button {
     font-family: 'Kreon', serif;
@@ -108,7 +108,7 @@ button {
 }
 
 
-/* SECTION DECOUVRIR */
+/* SECTION DECOUVRIR ==========================================*/
 
 section.indexSection {
     display: flex;
@@ -142,14 +142,14 @@ img#discover {
 }
 
 
-/* Image à faire apparaitre en responsive  */
+/* Image à faire apparaitre en responsive ============================================= */
 
 .responsive {
     display: none;
 }
 
 
-/* FOOTER  */
+/* FOOTER  ==================================================================*/
 
 footer {
     border-top: 1px solid rgba(255, 255, 255, 0.87);
@@ -249,10 +249,10 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* RESPONSIVE INDEX */
+/* RESPONSIVE INDEX================================================================== */
 
 
-/* Première étape entre ipad et iphone */
+/* Première étape entre ipad et iphone================================== */
 
 @media screen and (max-width: 661px) {
     #one {
@@ -270,7 +270,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* ETAPE Iphone 7/8Plus */
+/* ETAPE Iphone 7/8Plus===================================================== */
 
 @media screen and (max-width: 414px) {
     main.indexMain h1 {
@@ -294,7 +294,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* REGISTER.HTML */
+/* REGISTER.HTML=============================================================== */
 
 #registerHeader {
     display: flex;
@@ -307,7 +307,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* grande section du REGISTER FORM */
+/* grande section du REGISTER FORM ===============================================*/
 
 #forms {
     box-shadow: 0 2px 4px white;
@@ -327,7 +327,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* la div du REGISTER + boutton */
+/* la div du REGISTER + boutton======================================================== */
 
 #forms .registerForm {
     display: flex;
@@ -338,7 +338,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* la div REGISTER */
+/* la div REGISTER======================================================================= */
 
 #forms .registerForm .register {
     display: flex;
@@ -376,7 +376,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* la div du boutton */
+/* la div du boutton ================================================================*/
 
 #forms .registerForm .buttonRegister {
     display: flex;
@@ -408,7 +408,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* la div de l'offre */
+/* la div de l'offre=========================================================================== */
 
 #forms .offre {
     border: 2px solid #EB5757;
@@ -451,13 +451,13 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* FIN DU REGISTER */
+/* FIN DU REGISTER====================================================================================== */
 
 
-/* DEBUT DU CONNEXION FORM */
+/* DEBUT DU CONNEXION FORM ===============================================================*/
 
 
-/* la grande section du CONNEXION FORM */
+/* la grande section du CONNEXION FORM =================================*/
 
 #conect {
     box-shadow: 0 2px 4px white;
@@ -477,7 +477,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* la div du CONNEXION FORM + le boutton */
+/* la div du CONNEXION FORM + le boutton ===========================================================*/
 
 #conect .connexionForm {
     display: flex;
@@ -488,7 +488,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* la div du CONNEXION FORM */
+/* la div du CONNEXION FORM=================================================================== */
 
 #conect .connexionForm .connexion {
     display: flex;
@@ -526,7 +526,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* la div du BOUTTON */
+/* la div du BOUTTON============================================================== */
 
 #conect .connexionForm .buttonConnexion {
     display: flex;
@@ -558,7 +558,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* la div deco des heros */
+/* la div deco des heros =========================================================*/
 
 #conect .heros {
     border: 3px solid #EB5757;
@@ -588,7 +588,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* animation hover */
+/* animation hover======================================================================== */
 
 #forms:hover {
     transform: scale(1);
@@ -605,7 +605,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* CSS PAGE DE PRESENTATION */
+/* CSS PAGE DE PRESENTATION============================================================================ */
 
 #presentationHeader {
     display: flex;
@@ -645,7 +645,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* image de la video */
+/* image de la video ==========================================================================================*/
 
 #pagePresentation {
     background: rgba(0, 0, 0, 0.78);
@@ -674,7 +674,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* div de la presentation du film */
+/* div de la presentation du film============================================================== */
 
 #pagePresentation .synopsis {
     border: 2px solid #EB5757;
@@ -709,7 +709,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* bouton play */
+/* bouton play ===================================================================================*/
 
 .play-btn {
     width: 100px;
@@ -722,7 +722,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* triangle */
+/* triangle ============================================================================*/
 
 .play-btn::after {
     content: "";
@@ -741,7 +741,7 @@ footer #newsletterKideo .input-group {
 }
 
 
-/* pulse wave */
+/* pulse wave==================================================================================== */
 
 .play-btn:before {
     content: "";
@@ -772,4 +772,12 @@ footer #newsletterKideo .input-group {
         opacity: 0;
         box-shadow: none;
     }
+}
+
+#displayCategory {
+    display: none;
+}
+
+#displayCategory {
+    border: 3px solid green;
 }

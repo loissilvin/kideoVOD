@@ -19,15 +19,15 @@
         <img class="kideoForm" src="Public/img/Kideo.png" alt="Titre 'Kideo'">
     </header>
 
-    <section id="forms">
+    <form id="forms">
         <div class="registerForm">
 
             <div class="register">
                 <h1>S'inscrire</h1>
-                <input id="usernameInput" type="username" required placeholder=" Pseudo">
-                <input id="emailInput" type="email" required placeholder=" E-mail">
-                <input id="passwordInput" type="password" required placeholder=" Mot de passe">
-                <input id="passwordInput" type="password" required placeholder=" Confirmez mot de passe">
+                <input class="usernameInput" type="username" required placeholder=" Pseudo">
+                <input class="emailInput" type="email" required placeholder=" E-mail">
+                <input class="passwordInput" type="password" required placeholder=" Mot de passe">
+                <input class="passwordInput" type="password" required placeholder=" Confirmez mot de passe">
             </div>
 
             <div class="buttonRegister">
@@ -50,19 +50,19 @@
         </div>
 
         </div>
-    </section>
+    </form>
 
-    <section id="conect">
+    <form id="conect">
         <div class="connexionForm">
 
             <div class="connexion">
                 <h1>Se connecter</h1>
-                <input type="email" required placeholder=" E-mail">
-                <input type="password" required placeholder=" Mot de passe">
+                <input class="emailInputCo" type="email" required placeholder=" E-mail">
+                <input class="passwordInputCo" type="password" required placeholder=" Mot de passe">
             </div>
 
             <div class="buttonConnexion">
-                <button id="submitButton" type="submit">Envoyer</button>
+                <button id="submitButtonConnexion" type="submit">Envoyer</button>
                 <p>Pas encore de compte ? <a href="#" data-form="1" class="change">Inscrivez-vous</a></p>
             </div>
         </div>
@@ -72,7 +72,7 @@
         </div>
 
         </div>
-    </section>
+    </form>
 
     <!--   FOOTER START================== -->
     <footer>
@@ -109,50 +109,103 @@
 
 
 
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="Public/user.class.js"></script>
+    <script type="text/javascript" src="Public/script.js">
+        // // REDIRECTION DU BOUTON SE CONNECTER AU FORMULAIRE CONNEXION==================================================
+        // let searchParams = new URLSearchParams(window.location.search)
+        // let param = searchParams.get('form')
+        // const registerForm = document.getElementById("forms");
+        // const connectionForm = document.getElementById("conect");
+        // if (param == 1) {
+        //     registerForm.style.display = "none";
+        //     connectionForm.style.display = "flex";
+        // }
+
+
+
+
+
+        // // CHANGEMENT DE FORMULAIRE==============================================================================
+        // const buttons = document.getElementsByClassName("change");
+
+
+        // for (let i = 0; i < buttons.length; i++) {
+        //     buttons[i].addEventListener("click", function(e) {
+        //         if (e.target.getAttribute("data-form") == 0) {
+        //             registerForm.style.display = "none";
+        //             connectionForm.style.display = "flex";
+        //         } else {
+        //             connectionForm.style.display = "none";
+        //             registerForm.style.display = "flex";
+        //         }
+
+        //     });
+        // };
+
+        // // RECUPERATION DES INFOS UTILISATEURS==============================================
+        // $(document).ready(function(event) {
+        //     $('#submitButton').click(function(e) {
+        //         let username = $(".usernameInput").val();
+        //         let email = $(".emailInput").val();
+        //         let password = $(".passwordInput").val();
+
+        //         console.log(username, email, password);
+
+        //         let user = new User(username, email, password);
+        //         localStorage.setItem("user", JSON.stringify(user));
+
+
+        //         $.post("https://brianboudrioux.fr/simplon/api/users", {
+        //             username: username,
+        //             email: email,
+        //             password: password
+        //         }, function(data, status) {
+        //             console.log(status, data);
+        //             if (typeof data.errors == "undefined")
+        //                 window.location.href = "index.html"
+        //             else
+        //                 console.log(data.errors)
+
+        //         });
+        //     })
+
+
+
+        //     $('#submitButtonConnexion').click(function(e) {
+        //         // let username = $("#usernameInput").val();
+        //         let email = $(".emailInputCo").val();
+        //         let password = $(".passwordInputCo").val();
+
+        //         // console.log(username, email, password); 
+        //         // let user = new User(email, password);
+        //         // user = localStorage.getItem("user");
+        //         // user = JSON.parse(user);
+        //         // $(".emailInputCo").val(user.email);
+
+        //         $.post("https://brianboudrioux.fr/simplon/api/connect", {
+        //             // username: username,
+        //             email: email,
+        //             password: password
+        //         }, function(data, status) {
+
+        //             e.preventDefault();
+        //             console.log(status, data);
+        //             if (data.auth == true)
+        //                 window.location.href = "pagepresentation.html"
+        //             else
+        //                 console.log(data)
+
+        //         });
+        //     })
+        // });
+    </script>
+
 </body>
-<script type="text/javascript">
-    const buttons = document.getElementsByClassName("change");
-    const registerForm = document.getElementById("forms");
-    const connectionForm = document.getElementById("conect");
-
-
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener("click", function(e) {
-            if (e.target.getAttribute("data-form") == 0) {
-                registerForm.style.display = "none";
-                connectionForm.style.display = "flex";
-            } else {
-                connectionForm.style.display = "none";
-                registerForm.style.display = "flex";
-            }
-
-        })
-    };
-
-    $(document).ready(function(event) {
-        $('#submitButton').click(function(e) {
-            let username = $("#usernameInput").val();
-            let email = $("#emailInput").val();
-            let password = $("#passwordInput").val();
-
-            console.log(username, email, password);
 
 
 
-            $.post("https://brianboudrioux.fr/simplon/api/users", {
-                username: username,
-                email: email,
-                password: password
-            }, function(data, status) {
-                console.log(status);
-                if (typeof data.errors == "undefined")
-                    window.location.href = "index.html"
-                else
-                    console.log(data.errors)
-
-            });
-        })
-    });
-</script>
 
 </html>
