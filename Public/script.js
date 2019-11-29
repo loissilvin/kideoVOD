@@ -72,13 +72,18 @@ $(document).ready(function(event) {
         }, function(data, status) {
             console.log(status, data);
             if (typeof data.errors == "undefined")
-                window.location.href = "index.html"
-            else
+                window.location.href = "listing.html";
+
+            else {
+                e.preventDefault();
                 console.log(data.errors)
+            }
 
         });
     })
-
+    let user = localStorage.getItem("user");
+    user = JSON.parse(user);
+    $(".emailInputCo").val(user.email);
 
 
     $('#submitButtonConnexion').click(function(e) {
@@ -100,46 +105,78 @@ $(document).ready(function(event) {
 
             e.preventDefault();
             console.log(status, data);
-            if (data.auth == true)
-                window.location.href = "pagepresentation.html"
-            else
-                console.log(data)
+            if (data.auth == true) {
+                window.location.href = "listing.html"
+            } else {
+                e.preventDefault();
+                alert("ERROR FATLE")
+            }
 
         });
     })
 
-
+    // let sessionStart = sessionStorage.getItem("username");
+    // if (sessionStart != null) {
+    //     alert("Bonjour ${sessionStart}")
+    // }
 
     //   APEL API POUR CATEGORY=====================================================================
 
-    $(".retour").click(function(e) {
-        $("#pagePresentation").hide();
-        $("#displayCategory").show();
-    })
-    let urlCategory = "https://brianboudrioux.fr/simplon/api/categories";
-    $.get(urlCategory, function(data, status) {
-        console.log(data);
+    // $(".retour").click(function(e) {
+    //     $("#pagePresentation").hide();
+    //     $("#displayCategory").show();
+    // })
+    // let urlCategory = "https://brianboudrioux.fr/simplon/api/categories";
+    // $.get(urlCategory, function(data, status) {
+    //     console.log(data);
 
-        $.each(data, function(i, item) {
-            if (item.name == "kids" || item.name == "comedy") {
-                let article = $("<article>").attr("data-id", item._id);
+    //     $.each(data, function(i, item) {
+    //         if (item.name == "kids" || item.name == "comedy") {
+    //             let article = $("<article>").attr("data-id", item._id);
 
-                let title = $("<h2>").text(item.name);
-                title.appendTo(article);
+    //             let title = $("<h2>").text(item.name);
+    //             title.appendTo(article);
 
-                let image = $("<img>").attr("src", item.picture);
-                image.appendTo(article);
+    //             let image = $("<img>").attr("src", item.picture);
+    //             image.appendTo(article);
 
-                article.appendTo($("#displayCategory"));
+    //             article.appendTo($("#displayCategory"));
 
-            }
+    //         }
 
-        })
+    //     })
 
-    })
+    // })
 
 
+    // $("#filmCtgr").click(function(e) {
+    //     $("#serieCtgr").hide();
+    //     $("#docuCtgr").hide();
+    //     $("#listingSerie").hide();
+    //     $("#listingDocu").hide();
 
+    // })
+    // let urlCategory = "https://brianboudrioux.fr/simplon/api/categories";
+    // $.get(urlCategory, function(data, status) {
+    //     console.log(data);
+
+    //     $.each(data, function(i, item) {
+    //         if (item.name == "kids" || item.name == "comedy") {
+    //             let article = $("#filmCtgr").attr("data-id", item._id);
+
+    //             let title = $("<h2>").text(item.name);
+    //             title.appendTo(article);
+
+    //             let image = $("<img>").attr("src", item.picture);
+    //             image.appendTo(article);
+
+    //             article.appendTo($("#filmCtgr"));
+
+    //         }
+
+    //     })
+
+    // })
 
 
 })
