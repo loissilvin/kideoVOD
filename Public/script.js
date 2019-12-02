@@ -14,8 +14,46 @@ $(document).ready(function(event) {
     let goConnexion = $("#two");
     $("#two").click(function(e) {
         window.location.href = "register.html?form=1";
-
     })
+
+    let goEssayer = $("#three");
+    $("#three").click(function(e) {
+        window.location.href = "register.html?form=0";
+    })
+
+    let goPagePresentation = $(".listingimg");
+    $(".listingimg").click(function(e) {
+        window.location.href = "pagepresentation.html";
+    })
+
+    $("#filmCtgr").mouseenter(function() {
+        $("main.listingMain section#listingFilm div.listingimg").show();
+        $("main.listingMain section#listingSerie div.listingimg").hide();
+        $("main.listingMain section#listingDocu div.listingimg").hide();
+    })
+
+    $("#serieCtgr").mouseenter(function() {
+        $("main.listingMain section#listingSerie div.listingimg").show();
+        $("main.listingMain section#listingFilm div.listingimg").hide();
+        $("main.listingMain section#listingDocu div.listingimg").hide();
+    })
+
+    $("#docuCtgr").mouseenter(function() {
+        $("main.listingMain section#listingDocu div.listingimg").show();
+        $("main.listingMain section#listingFilm div.listingimg").hide();
+        $("main.listingMain section#listingSerie div.listingimg").hide();
+    })
+
+
+    // $(".listingimg").click(function() {
+    //     $.get("https://brianboudrioux.fr/simplon/api/products/5dbf0500cbd3166665f3a463", function(data, status) {
+    //         console.log(data.picture);
+    //         $(".containerImg").attr("src", data.media);
+    //         window.location.href = "pagepresentation.html"
+    //     });
+    // })
+
+
 
 
 
@@ -38,8 +76,6 @@ $(document).ready(function(event) {
 
     // CHANGEMENT DE FORMULAIRE==============================================================================
     const buttons = document.getElementsByClassName("change");
-
-
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function(e) {
             if (e.target.getAttribute("data-form") == 0) {
@@ -49,7 +85,6 @@ $(document).ready(function(event) {
                 connectionForm.style.display = "none";
                 registerForm.style.display = "flex";
             }
-
         });
     };
 
@@ -58,13 +93,9 @@ $(document).ready(function(event) {
         let username = $(".usernameInput").val();
         let email = $(".emailInput").val();
         let password = $(".passwordInput").val();
-
         console.log(username, email, password);
-
         let user = new User(username, email, password);
         localStorage.setItem("user", JSON.stringify(user));
-
-
         $.post("https://brianboudrioux.fr/simplon/api/users", {
             username: username,
             email: email,
@@ -73,14 +104,13 @@ $(document).ready(function(event) {
             console.log(status, data);
             if (typeof data.errors == "undefined")
                 window.location.href = "listing.html";
-
             else {
                 e.preventDefault();
                 console.log(data.errors)
             }
-
         });
     })
+
     let user = localStorage.getItem("user");
     user = JSON.parse(user);
     $(".emailInputCo").val(user.email);
@@ -90,19 +120,16 @@ $(document).ready(function(event) {
         // let username = $("#usernameInput").val();
         let email = $(".emailInputCo").val();
         let password = $(".passwordInputCo").val();
-
         // console.log(username, email, password); 
         // let user = new User(email, password);
         // user = localStorage.getItem("user");
         // user = JSON.parse(user);
         // $(".emailInputCo").val(user.email);
-
         $.post("https://brianboudrioux.fr/simplon/api/connect", {
             // username: username,
             email: email,
             password: password
         }, function(data, status) {
-
             e.preventDefault();
             console.log(status, data);
             if (data.auth == true) {
@@ -111,72 +138,72 @@ $(document).ready(function(event) {
                 e.preventDefault();
                 alert("ERROR FATLE")
             }
-
         });
     })
 
-    // let sessionStart = sessionStorage.getItem("username");
-    // if (sessionStart != null) {
-    //     alert("Bonjour ${sessionStart}")
-    // }
+    //   APEL API =====================================================================
 
-    //   APEL API POUR CATEGORY=====================================================================
+    let urlFilm = "https://brianboudrioux.fr/simplon/api/products/category/5dbeff05cbd3166665f3a45a";
+    $.get(urlFilm, function(data, status) {
+        console.log(data);
+        $.each(data, function(i, item) {
+            if (i === 4) {
+                return false
+            }
+            let article = $("<div class='listingimg'>").attr("data-id", item._id);
+            let image = $("<img id='img1'>").attr({ "src": item.picture, "alt": item.media });
+            image.appendTo(article);
+            article.appendTo($("#listingFilm"));
+            $(image).click(function() {
+                let lien = $(this).attr("alt")
+                window.location.href = lien;
+            })
 
-    // $(".retour").click(function(e) {
-    //     $("#pagePresentation").hide();
-    //     $("#displayCategory").show();
-    // })
-    // let urlCategory = "https://brianboudrioux.fr/simplon/api/categories";
-    // $.get(urlCategory, function(data, status) {
-    //     console.log(data);
+        })
 
-    //     $.each(data, function(i, item) {
-    //         if (item.name == "kids" || item.name == "comedy") {
-    //             let article = $("<article>").attr("data-id", item._id);
+        let urlSerie = "https://brianboudrioux.fr/simplon/api/products/category/5dbf0c166cb3406eba1ac780";
+        $.get(urlSerie, function(data, status) {
+            console.log(data);
+            $.each(data, function(i, item) {
+                if (i === 4) {
+                    return false
+                }
+                let article = $("<div class='listingimg'>").attr("data-id", item._id);
+                let image = $("<img id='img1'>").attr({ "src": item.picture, "alt": item.media });
+                image.appendTo(article);
+                article.appendTo($("#listingSerie"));
+                $(image).click(function() {
+                    let lien = $(this).attr("alt")
+                    window.location.href = lien;
+                })
+            })
+        })
 
-    //             let title = $("<h2>").text(item.name);
-    //             title.appendTo(article);
-
-    //             let image = $("<img>").attr("src", item.picture);
-    //             image.appendTo(article);
-
-    //             article.appendTo($("#displayCategory"));
-
-    //         }
-
-    //     })
-
-    // })
-
-
-    // $("#filmCtgr").click(function(e) {
-    //     $("#serieCtgr").hide();
-    //     $("#docuCtgr").hide();
-    //     $("#listingSerie").hide();
-    //     $("#listingDocu").hide();
-
-    // })
-    // let urlCategory = "https://brianboudrioux.fr/simplon/api/categories";
-    // $.get(urlCategory, function(data, status) {
-    //     console.log(data);
-
-    //     $.each(data, function(i, item) {
-    //         if (item.name == "kids" || item.name == "comedy") {
-    //             let article = $("#filmCtgr").attr("data-id", item._id);
-
-    //             let title = $("<h2>").text(item.name);
-    //             title.appendTo(article);
-
-    //             let image = $("<img>").attr("src", item.picture);
-    //             image.appendTo(article);
-
-    //             article.appendTo($("#filmCtgr"));
-
-    //         }
-
-    //     })
-
-    // })
+        let urlDocu = "https://brianboudrioux.fr/simplon/api/products/category/5dbf0adc6cb3406eba1ac77d";
+        $.get(urlDocu, function(data, status) {
+            console.log(data);
+            $.each(data, function(i, item) {
+                if (i === 4) {
+                    return false
+                }
+                let article = $("<div class='listingimg'>").attr("data-id", item._id);
+                let image = $("<img id='img1'>").attr({ "src": item.picture, "alt": item.media });
+                image.appendTo(article);
+                article.appendTo($("#listingDocu"));
+                $(image).click(function() {
+                    let lien = $(this).attr("alt")
+                    window.location.href = lien;
+                })
+            })
+        })
 
 
+    })
+
+
+
+
+
+
+    // fin
 })

@@ -56,6 +56,11 @@ main.indexMain h2 {
 
 button {
     font-family: "Kreon", serif;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
 }
 
 #one {
@@ -105,6 +110,7 @@ button {
     color: white;
     font-weight: bold;
     display: none;
+    outline: none;
 }
 
 
@@ -315,8 +321,6 @@ footer #newsletterKideo .input-group {
     transform: scale(0.9);
     background: white;
     transition: 1s;
-    background-size: 600% 600%;
-    animation: beforeLineAnim 5s ease-in-out infinite;
     display: flex;
     margin: auto;
     width: 60%;
@@ -427,6 +431,7 @@ footer #newsletterKideo .input-group {
     font-family: "granstander clean";
     color: #eb5757;
     margin-top: 10px;
+    margin-bottom: 0;
 }
 
 #forms .offre p.pOffre {
@@ -465,8 +470,6 @@ footer #newsletterKideo .input-group {
     transform: scale(0.9);
     background: white;
     transition: 1s;
-    background-size: 600% 600%;
-    animation: beforeLineAnim 5s ease-in-out infinite;
     display: flex;
     margin: auto;
     width: 60%;
@@ -599,12 +602,6 @@ footer #newsletterKideo .input-group {
     transform: scale(1);
 }
 
-@keyframes beforeLineAnim {
-    to {
-        background-position: 30% 30%;
-    }
-}
-
 
 /* PAGE DE LISTING */
 
@@ -632,6 +629,62 @@ main.listingMain section.listingCategorie .ctgr {
     width: 30%;
     position: relative;
     display: inline-block;
+}
+
+main.listingMain section.listingCategorie .ctgr:hover {
+    animation: shake 2s;
+    /* animation-iteration-count: 2; */
+}
+
+@-webkit-keyframes shake {
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+@keyframes shake {
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+.shake {
+    -webkit-animation-name: shake;
+    animation-name: shake;
 }
 
 main.listingMain section.listingCategorie .ctgr img {
@@ -672,7 +725,7 @@ main.listingMain section.listingCategorie div#docuCtgr .titrectgr h2 {
 /* DIV A CLIQUER POUR ARRIVER SUR PAGE PRESENTATION */
 
 main.listingMain section.listing {
-    padding: 5% 0;
+    /* padding: 5% 0; */
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -685,16 +738,96 @@ main.listingMain section.listing div.listingimg {
     border-radius: 50%;
 }
 
+main.listingMain section.listing div.listingimg {
+    animation: flip 2s;
+}
+
+@-webkit-keyframes flip {
+    from {
+        -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+        transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    40% {
+        -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    50% {
+        -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    80% {
+        -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    to {
+        -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes flip {
+    from {
+        -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+        transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    40% {
+        -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    50% {
+        -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    80% {
+        -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    to {
+        -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+}
+
+.animated.flip {
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-animation-name: flip;
+    animation-name: flip;
+}
+
 main.listingMain section#listingFilm div.listingimg {
-    border: 5px double #00ffe9;
+    border: 10px double #00ffe9;
+    display: none;
 }
 
 main.listingMain section#listingSerie div.listingimg {
-    border: 5px double #fff500;
+    border: 10px double #fff500;
+    display: none;
 }
 
 main.listingMain section#listingDocu div.listingimg {
-    border: 5px double #42ff3a;
+    border: 10px double #42ff3a;
+    display: none;
 }
 
 main.listingMain section.listing div.listingimg img {
@@ -975,14 +1108,19 @@ main.listingMain section.listingResponsive {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+#pagePresentation .synopsis h2 {
+    font-size: 2vw;
 }
 
 #pagePresentation .synopsis p.resume {
-    text-align: left;
+    /* text-align: left; */
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin: 0 20px;
+    font-size: 1.2vw;
 }
 
 #pagePresentation .synopsis div.liens {
@@ -1065,14 +1203,6 @@ main.listingMain section.listingResponsive {
     }
 }
 
-#displayCategory {
-    display: none;
-}
-
-#displayCategory {
-    border: 3px solid green;
-}
-
 main.listingMain section.listingResponsive .ctgrResponsive div.titreResponsive {
     height: 8vh;
 }
@@ -1081,5 +1211,127 @@ main.listingMain section.listingResponsive .ctgrResponsive div.titreResponsive {
     main.listingMain section.listingResponsive .responsiveImg .listingimg {
         width: 100px;
         height: 100px;
+    }
+}
+
+
+/*  REGISTER RESPONSIVE================================================================= */
+
+@media screen and (max-width: 750px) {
+    #registerHeader img.kideoForm {
+        width: 50%;
+    }
+    #forms {
+        flex-direction: column;
+        width: 90%;
+        height: 120vh;
+        transform: none;
+        margin-bottom: 20px;
+    }
+    #forms div.registerForm {
+        width: 100%;
+    }
+    #forms div.offre {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+    #forms div.offre img.prix {
+        width: 50%;
+        height: 15vh;
+    }
+    #forms div.offre img.screen {
+        width: 40%;
+        height: 10vh;
+    }
+    footer {
+        flex-direction: column;
+        padding-left: 15px;
+    }
+    footer .cols1 {
+        width: 100%;
+        display: flex;
+        flex-direction: unset;
+    }
+    footer #logoKideo img {
+        margin: 10px;
+        margin-left: 0;
+        width: 30%;
+    }
+    footer #logoKideo {
+        flex-direction: unset;
+        margin: 0;
+        justify-content: unset;
+    }
+    footer #logoKideo p {
+        font-size: 4vw;
+        margin-top: 30px;
+    }
+    footer h4.title {
+        margin-right: 10px;
+    }
+    footer #newsletterKideo.cols1 h4 {
+        margin-top: 10px;
+    }
+    #conect {
+        flex-direction: column;
+        width: 90%;
+        height: 85vh;
+        transform: none;
+        margin-bottom: 20px;
+    }
+    #conect div.connexionForm {
+        width: 100%;
+        height: 50vh;
+    }
+    #conect div.heros {
+        width: 90%;
+        margin-bottom: 15px;
+        height: 30vh;
+        margin-right: 0;
+    }
+    #conect div.heros p.slogan {
+        font-size: 10vw;
+        line-height: 9vh;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    #registerHeader img.kideoForm {
+        width: 50%;
+    }
+    #forms {
+        width: 90%;
+    }
+    footer {
+        flex-direction: column;
+        padding-left: 15px;
+    }
+    footer .cols1 {
+        width: 100%;
+        display: flex;
+        flex-direction: unset;
+    }
+    footer #logoKideo img {
+        margin: 10px;
+        margin-left: 0;
+        width: 20%;
+    }
+    footer #logoKideo {
+        flex-direction: unset;
+        margin: 0;
+        justify-content: unset;
+    }
+    footer #logoKideo p {
+        font-size: 3vw;
+        margin-top: 30px;
+    }
+    footer h4.title {
+        margin-right: 30px;
+    }
+    footer #newsletterKideo.cols1 h4 {
+        margin-top: 10px;
+    }
+    #conect {
+        width: 90%;
     }
 }
