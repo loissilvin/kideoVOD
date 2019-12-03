@@ -20,25 +20,29 @@ $(document).ready(function(event) {
     $("#three").click(function(e) {
         window.location.href = "register.html?form=0";
     })
+    let goCoMobile = $("#four");
+    $("#four").click(function(e) {
+        window.location.href = "register.html?form=1";
+    })
 
     let goPagePresentation = $(".listingimg");
     $(".listingimg").click(function(e) {
         window.location.href = "pagepresentation.html";
     })
 
-    $("#filmCtgr").mouseenter(function() {
+    $("#filmCtgr").click(function() {
         $("main.listingMain section#listingFilm div.listingimg").show();
         $("main.listingMain section#listingSerie div.listingimg").hide();
         $("main.listingMain section#listingDocu div.listingimg").hide();
     })
 
-    $("#serieCtgr").mouseenter(function() {
+    $("#serieCtgr").click(function() {
         $("main.listingMain section#listingSerie div.listingimg").show();
         $("main.listingMain section#listingFilm div.listingimg").hide();
         $("main.listingMain section#listingDocu div.listingimg").hide();
     })
 
-    $("#docuCtgr").mouseenter(function() {
+    $("#docuCtgr").click(function() {
         $("main.listingMain section#listingDocu div.listingimg").show();
         $("main.listingMain section#listingFilm div.listingimg").hide();
         $("main.listingMain section#listingSerie div.listingimg").hide();
@@ -101,10 +105,11 @@ $(document).ready(function(event) {
             email: email,
             password: password
         }, function(data, status) {
+            e.preventDefault();
             console.log(status, data);
-            if (typeof data.errors == "undefined")
+            if (typeof data.errors == "undefined") {
                 window.location.href = "listing.html";
-            else {
+            } else {
                 e.preventDefault();
                 console.log(data.errors)
             }
@@ -136,10 +141,14 @@ $(document).ready(function(event) {
                 window.location.href = "listing.html"
             } else {
                 e.preventDefault();
-                alert("ERROR FATLE")
+                alert("ERROR FATLE");
             }
         });
     })
+
+
+
+
 
     //   APEL API =====================================================================
 

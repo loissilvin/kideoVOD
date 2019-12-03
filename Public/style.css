@@ -285,9 +285,6 @@ footer #newsletterKideo .input-group {
     .responsive {
         display: initial;
     }
-    .noresponsive {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 360px) {
