@@ -74,6 +74,20 @@ $(document).ready(function(event) {
         connectionForm.style.display = "flex";
     }
 
+    // $(".listingimg").on("click", ".media", function() {
+    //     let src = $(this).data("media");
+    //     $("iframe").attr("href", "pagepresentation.html?id=" + src);
+    //     // window.location.href = "pagepresentation.html";
+    // })
+
+    //On récupére dans l'url le lien et on l'injecte dans l'Iframe
+    // const params = new URL(document.location).searchParams;
+    // const lien = params.get("id");
+    // $("iframe").attr("src", lien);
+
+    var params = new window.URLSearchParams(window.location.search);
+    var lien = params.get("id")
+    $("iframe").attr("src", lien)
 
 
 
@@ -146,27 +160,41 @@ $(document).ready(function(event) {
         });
     })
 
+    $(".play-btn").click(function() {
+        $(this).css("display", "none");
+        //$("iframe").contents().find(".ytp-large-play-button .ytp-button").trigger("click");
+        //console.log($("iframe").contents().find("#player"))
+        console.log($("iframe"))
+        $("iframe").attr("src", $("iframe").attr("src") + '?autoplay=1&mute=1')
+    })
 
 
 
 
+    const bla = document.getElementById('ouino')
+    console.log($('#ouino'))
     //   APEL API =====================================================================
 
-    let urlFilm = "https://brianboudrioux.fr/simplon/api/products/category/5dbeff05cbd3166665f3a45a";
-    $.get(urlFilm, function(data, status) {
+        let urlFilm = "https://brianboudrioux.fr/simplon/api/products/category/5dbeff05cbd3166665f3a45a";
+            $.get(urlFilm, function(data, status) {
         console.log(data);
-        $.each(data, function(i, item) {
-            if (i === 4) {
-                return false
-            }
+                $.each(data, function(i, item) {
+                    if (i === 4) {
+                        return false
+                    }
             let article = $("<div class='listingimg'>").attr("data-id", item._id);
             let image = $("<img id='img1'>").attr({ "src": item.picture, "alt": item.media });
             image.appendTo(article);
             article.appendTo($("#listingFilm"));
             $(image).click(function() {
-                let lien = $(this).attr("alt")
-                window.location.href = lien;
+                let src = $(this).attr("alt");
+                // $("#iframe").attr("src", src);
+                // var att = $("#iframe").attr("src")
+                window.location.href = "pagepresentation.html?id=" + src;
+                $("div.synopsis p#ouino").text(item.name)
+
             })
+
 
         })
 
@@ -183,10 +211,10 @@ $(document).ready(function(event) {
                 article.appendTo($("#listingSerie"));
                 $(image).click(function() {
                     let lien = $(this).attr("alt")
-                    window.location.href = lien;
+                    window.location.href = "pagepresentation.html";
                 })
             })
-        })
+        });
 
         let urlDocu = "https://brianboudrioux.fr/simplon/api/products/category/5dbf0adc6cb3406eba1ac77d";
         $.get(urlDocu, function(data, status) {
@@ -201,7 +229,7 @@ $(document).ready(function(event) {
                 article.appendTo($("#listingDocu"));
                 $(image).click(function() {
                     let lien = $(this).attr("alt")
-                    window.location.href = lien;
+                    window.location.href = "pagepresentation.html";
                 })
             })
         })

@@ -1088,7 +1088,7 @@ main.listingMain section.listingResponsive {
     height: 70vh;
 }
 
-#pagePresentation .containerImg img.imgVideo {
+#pagePresentation .containerImg iframe {
     width: 80%;
     height: 63vh;
     border-radius: 0px 0px 0px 20px;
